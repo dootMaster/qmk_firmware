@@ -4,7 +4,7 @@
 #include "shared_keymap.h"
 
 bool drag_scroll = false;
-#define DRAGSCROLL_DENOMINATOR 200;
+#define DRAGSCROLL_DENOMINATOR 100;
 static int _dragscroll_accumulator_x = 0;
 static int _dragscroll_accumulator_y = 0;
 

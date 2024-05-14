@@ -23,7 +23,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         KC_GRV,    KC_1,    KC_2,    KC_3,   KC_4,   KC_5,   KC_6,
         KC_TAB,    KC_Q,    KC_W,    KC_E,   KC_R,   KC_T,   KC_LBRC,
         KC_LALT,   KC_A,    KC_S,    KC_D,   KC_F,   KC_G,   TG(_FN),
-  OSM(MOD_LSFT),   KC_Z,    KC_X,    KC_C,   KC_V,   KC_B,
+        KC_LSFT,   KC_Z,    KC_X,    KC_C,   KC_V,   KC_B,
         KC_CAPS,   KC_LGUI, TAB_L,   TAB_R,
                             KC_LCTL, KC_SPC, // [4, 4] 4, 5 | [4, 5] 5, 5
                             DRAG_SCROLL, KC_BTN1,    // [5, 4] 6, 6 | [5, 6] 7, 6
@@ -36,22 +36,22 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
                               KC_LEFT, KC_UP,    KC_DOWN,  KC_RGHT,
                       KC_ENT,
                       KC_BSPC,
-             KC_RALT, EMOJI  // [11, 0] 9, 7 | [11, 1] 10, 7
+             KC_DEL, EMOJI  // [11, 0] 9, 7 | [11, 1] 10, 7
     ),
 
     [_FN] = LAYOUT_5x7(
         // left hand
-        _______,   KC_F1,     KC_F2,   KC_F3,    KC_F4,     KC_F5,    KC_F6,
-        KC_TAB ,   _______,   KC_Q,    KC_W,     KC_E,      KC_R,     KC_T,
-        _______,   _______,   KC_A,    KC_S,     KC_D,      KC_F,     KC_TRNS,
+        _______,   _______,   KC_1,      KC_2,    KC_3,     KC_4,      KC_5,
+        KC_TAB,    _______,   KC_Q,    KC_W,     KC_E,      KC_R,     KC_T,
+        KC_LALT,   KC_LSFT,   KC_A,    KC_S,     KC_D,      KC_F,     TG(_FN),
         _______,   _______,   KC_Z,    KC_X,     KC_C,      KC_V,
-        KC_MSTP,   KC_MPLY,   KC_MPRV,   KC_MNXT,
+        KC_MSTP,   KC_LGUI, TAB_L,   TAB_R,
                                     KC_LCTL, KC_SPC,
                                     _______, _______,
                                     _______, _______,
         // right hand
-          KC_F7,     KC_F8,     KC_F9,     KC_F10,    KC_F11,    KC_F12,    QK_BOOT,
-          _______,   _______,   _______,   _______,   _______,   _______,   _______,
+          KC_F1,     KC_F2,     KC_F3,     KC_F4,    KC_F5,    KC_F6,    QK_BOOT,
+          KC_F7,     KC_F8,     KC_F9,     KC_F10,    KC_F11,    KC_F12,   _______,
           _______,   _______,   _______,   _______,   _______,   _______,   _______,
                       _______,   _______,   _______,   _______,   _______,   _______,
                                             _______,   _______,   _______,   _______,

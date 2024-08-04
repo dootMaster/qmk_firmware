@@ -8,6 +8,10 @@ bool drag_scroll = false;
 static int _dragscroll_accumulator_x = 0;
 static int _dragscroll_accumulator_y = 0;
 
+#ifndef REGULAR_MOUSE_SENSITIVITY
+#define REGULAR_MOUSE_SENSITIVITY 0.5
+#endif
+
 
 report_mouse_t pointing_device_task_user(report_mouse_t mouse_report) {
     if (drag_scroll) {
@@ -35,6 +39,9 @@ report_mouse_t pointing_device_task_user(report_mouse_t mouse_report) {
         }
         mouse_report.x = 0;
         mouse_report.y = 0;
+    } else {
+        mouse_report.x *= REGULAR_MOUSE_SENSITIVITY;
+        mouse_report.y *= REGULAR_MOUSE_SENSITIVITY;
     }
 
     return mouse_report;
@@ -50,8 +57,8 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
           _dragscroll_accumulator_y = 0;
           drag_scroll = false;
         }
-        return false; // Skip all further processing of this key
+        return false;
     default:
-        return true; // Process all other keycodes normally
+        return true;
   }
 }

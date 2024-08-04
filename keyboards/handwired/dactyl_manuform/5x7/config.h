@@ -31,12 +31,12 @@
 #define DRIVER_LED_TOTAL 76
 // WS2812 RGB LED strip input and number of LEDs
 
-#define RGBLIGHT_SPLIT  // synchronization functionality for split keyboards
-#define RGB_MATRIX_STARTUP_HUE 170
+// #define RGBLIGHT_SPLIT  // synchronization functionality for split keyboards
+// #define RGB_MATRIX_STARTUP_HUE 170
 #define SPLIT_LAYER_STATE_ENABLE
-#define RGB_MATRIX_SPLIT {38, 38}
+// #define RGB_MATRIX_SPLIT {38, 38}
 #define SPLIT_TRANSPORT_MIRROR
 
-#define RGB_MATRIX_KEYPRESSES
-#define ENABLE_RGB_MATRIX_SOLID_REACTIVE_MULTINEXUS
-#define ENABLE_RGB_MATRIX_RAINBOW_MOVING_CHEVRON
+// #define RGB_MATRIX_KEYPRESSES
+// #define ENABLE_RGB_MATRIX_SOLID_REACTIVE_MULTINEXUS
+// #define ENABLE_RGB_MATRIX_RAINBOW_MOVING_CHEVRON

@@ -23,9 +23,14 @@
 
 // trackball
 #define PMW33XX_CS_PIN B0
-#define PMW33XX_CPI 2000
+#define PMW33XX_CPI 400
 #define POINTING_DEVICE_INVERT_Y
 #define DRAGSCROLL_V_INVERT
+#define ACCELERATION_FACTOR 4  // Adjust this factor to control acceleration sensitivity
+#define MIN_SPEED 1  // Minimum speed to start applying acceleration
+
+// #define POINTING_DEVICE_TASK_THROTTLE_MS 1  // Updates every 1 millisecond
+
 
 // The number of LEDs connected
 #define DRIVER_LED_TOTAL 76
@@ -36,6 +41,9 @@
 #define SPLIT_LAYER_STATE_ENABLE
 // #define RGB_MATRIX_SPLIT {38, 38}
 #define SPLIT_TRANSPORT_MIRROR
+
+#define DEBUG
+#define DEBUG_LED
 
 // #define RGB_MATRIX_KEYPRESSES
 // #define ENABLE_RGB_MATRIX_SOLID_REACTIVE_MULTINEXUS

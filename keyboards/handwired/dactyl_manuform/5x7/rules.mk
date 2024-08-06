@@ -1,11 +1,11 @@
 # Build Options
 #   change yes to no to disable
 #   enabling stuff uses up microcontroller space
-BOOTMAGIC_ENABLE = yes       # Enable Bootmagic Lite (need this for qk_boot, but not qk_bootloader)
-MOUSEKEY_ENABLE = no       # Mouse keys
-EXTRAKEY_ENABLE = no       # Audio control and System control
+BOOTMAGIC_ENABLE = no       # Enable Bootmagic Lite (need this for qk_boot, but not qk_bootloader)
+MOUSEKEY_ENABLE = no        # Mouse keys
+EXTRAKEY_ENABLE = no        # Audio control and System control
 CONSOLE_ENABLE = no         # Console for debug
-COMMAND_ENABLE = no        # Commands for debug and configuration
+COMMAND_ENABLE = no         # Commands for debug and configuration
 NKRO_ENABLE = no            # Enable N-Key Rollover
 BACKLIGHT_ENABLE = no       # Enable keyboard backlight functionality
 RGBLIGHT_ENABLE = no        # Enable keyboard RGB underglow

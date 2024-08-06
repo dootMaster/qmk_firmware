@@ -15,6 +15,7 @@
 
 enum custom_keycodes {
   DRAG_SCROLL = SAFE_RANGE,
+  booty
 };
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
@@ -26,17 +27,17 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         KC_LSFT,   KC_Z,    KC_X,    KC_C,   KC_V,   KC_B,
         KC_CAPS,   KC_LGUI, TAB_L,   TAB_R,
                             KC_LCTL, KC_SPC, // [4, 4] 4, 5 | [4, 5] 5, 5
-                            DRAG_SCROLL, KC_BTN1,    // [5, 4] 6, 6 | [5, 6] 7, 6
+                            DRAG_SCROLL, KC_BTN1, // [5, 4] 6, 6 | [5, 6] 7, 6
                             KC_ESC, SCREEN_GRAB,  // [5, 3] 6, 7 | [5, 5] 7, 7
         // right hand
             KC_7,    KC_8,    KC_9,    KC_0,     KC_MINS,  KC_EQL,   MULTI,
             KC_RBRC, KC_Y,    KC_U,    KC_I,     KC_O,     KC_P,     KC_BSLS,
-        TG(_NUMPAD), KC_H,    KC_J,    KC_K,     KC_L,     KC_SCLN,  KC_QUOT,
+        OSL(_FN), KC_H,    KC_J,    KC_K,     KC_L,     KC_SCLN,  KC_QUOT,
             KC_N,    KC_M,    KC_COMM, KC_DOT,   KC_SLSH,  OSM(MOD_RSFT),
                               KC_LEFT, KC_UP,    KC_DOWN,  KC_RGHT,
                       KC_ENT,
                       KC_BSPC,
-             KC_DEL, EMOJI  // [11, 0] 9, 7 | [11, 1] 10, 7
+             KC_DEL, EMOJI // [11, 0] 9, 7 | [11, 1] 10, 7
     ),
 
     [_FN] = LAYOUT_5x7(
@@ -50,7 +51,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
                                     _______, _______,
                                     _______, _______,
         // right hand
-          KC_F1,     KC_F2,     KC_F3,     KC_F4,    KC_F5,    KC_F6,    QK_BOOT,
+          KC_F1,     KC_F2,     KC_F3,     KC_F4,    KC_F5,    KC_F6,    booty,
           KC_F7,     KC_F8,     KC_F9,     KC_F10,    KC_F11,    KC_F12,   _______,
           _______,   _______,   _______,   _______,   _______,   _______,   _______,
                       _______,   _______,   _______,   _______,   _______,   _______,
@@ -59,25 +60,24 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
                       _______,
              _______, _______
     ),
-
-    [_NUMPAD] = LAYOUT_5x7(
-        // left hand
-        _______,   _______,   _______,   _______,   _______,   _______,  _______,
-        _______,   _______,   _______,   _______,   _______,   _______,  _______,
-        _______,   _______,   _______,   _______,   _______,   _______,  _______,
-        _______,   _______,   _______,   _______,   _______,   _______,
-        _______,   _______,   _______,   _______,
-                                    _______, _______,
-                                    _______, _______,
-                                    _______, _______,
-        // right hand
-          _______,   _______,   KC_NUM,    _______,   KC_PMNS,   KC_PPLS,   _______,
-          _______,   _______,   KC_P7,     KC_P8,     KC_P9,     _______,   _______,
-          _______,   _______,   KC_P4,     KC_P5,     KC_P6,     KC_PAST,   _______,
-                     _______,   KC_P1,     KC_P2,     KC_P3,     KC_PSLS,   _______,
-                                            KC_P0,     KC_PDOT,   _______,   _______,
-                      KC_PENT,
-                      _______,
-             _______, _______
-    ),
+    // [_NUMPAD] = LAYOUT_5x7(
+    //     // left hand
+    //     _______,   _______,   _______,   _______,   _______,   _______,  _______,
+    //     _______,   _______,   _______,   _______,   _______,   _______,  _______,
+    //     _______,   _______,   _______,   _______,   _______,   _______,  _______,
+    //     _______,   _______,   _______,   _______,   _______,   _______,
+    //     _______,   _______,   _______,   _______,
+    //                                 _______, _______,
+    //                                 _______, _______,
+    //                                 _______, _______,
+    //     // right hand
+    //       _______,   _______,   KC_NUM,    _______,   KC_PMNS,   KC_PPLS,   _______,
+    //       _______,   _______,   KC_P7,     KC_P8,     KC_P9,     _______,   _______,
+    //       _______,   _______,   KC_P4,     KC_P5,     KC_P6,     KC_PAST,   _______,
+    //                  _______,   KC_P1,     KC_P2,     KC_P3,     KC_PSLS,   _______,
+    //                                         KC_P0,     KC_PDOT,   _______,   _______,
+    //                   KC_PENT,
+    //                   _______,
+    //          _______, _______
+    // ),
 };
